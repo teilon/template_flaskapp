@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post" id="login_form" class="minimal-form">
+    <input maxlength="255" name="username" id="username" placeholder="Email address or username" type="text" class="TextInput TextInput_large">
+    <input type="password" class="TextInput TextInput_large" id="password" name="password" placeholder="Password" maxlength="64">
+    <input name="evaluateUsername" id="loginButton" type="submit" class="Btn Btn_emph Btn_super" value="Continue">
+    <input name="rememberMe" id="rememberMe" type="checkbox" class="checkbox" value="true">
+</form>
+{% if error %}
+    <div>{{ error }}</div>
+{% endif %}
+{% endblock %}
